@@ -1,0 +1,93 @@
+.qns-records-page {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.records-container, .other-record-item {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+
+.records-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.record-tab {
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    border-bottom: 2px solid transparent;
+}
+
+.record-tab.active {
+    color: var(--color-text-primary);
+    border-bottom-color: var(--color-secondary);
+}
+
+.record-tab span {
+    margin-left: 8px;
+    background-color: var(--color-background);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+.records-content {
+    padding: 24px;
+}
+
+.record-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.record-key {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.record-value {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: monospace;
+}
+
+.record-value .copy-btn {
+    color: var(--color-text-secondary);
+}
+.record-value .copy-btn:hover {
+    color: var(--color-text-primary);
+}
+
+.empty-records {
+    text-align: center;
+    padding: 40px;
+    color: var(--color-text-secondary);
+}
+
+.other-records-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.other-record-item {
+    padding: 24px;
+}
+
+.other-record-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+.other-record-item p {
+    color: var(--color-text-secondary);
+}

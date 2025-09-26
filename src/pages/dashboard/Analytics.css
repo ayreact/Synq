@@ -1,0 +1,300 @@
+
+.analytics-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.analytics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.analytics-header h1 {
+    font-size: 2.5rem;
+    font-family: var(--font-space-grotesk);
+}
+
+.date-range-picker {
+    display: flex;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.date-range-picker span {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+}
+
+.date-range-picker span.active {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 24px;
+    grid-template-areas:
+        "metric1 metric2 metric3 metric4"
+        "streak streak engagement engagement"
+        "bridge bridge activity activity";
+}
+
+.card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.metric-card {
+    border-radius: 16px;
+    padding: 24px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card.green { background-color: #166534; }
+.metric-card.purple { background-color: #581c87; }
+.metric-card.blue { background-color: #1e40af; }
+.metric-card.red { background-color: #881337; }
+
+.metric-card svg {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+    opacity: 0.8;
+}
+
+.metric-card span {
+    display: block;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.metric-card p {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-space-grotesk);
+}
+
+.metric-card small {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.daily-streak-card { grid-area: streak; }
+.engagement-card { grid-area: engagement; }
+.bridge-asset-card { grid-area: bridge; }
+.activity-feed-card { grid-area: activity; }
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.card-header h3 {
+    font-size: 1.25rem;
+    font-family: var(--font-space-grotesk);
+}
+
+.streak-progress {
+    margin-bottom: 24px;
+}
+
+.streak-progress p {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: var(--color-background);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 4px;
+}
+.progress-bar.green {
+    background: linear-gradient(90deg, #16a34a, #166534);
+}
+
+
+.streak-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.day-box {
+    height: 24px;
+    background-color: var(--color-background);
+    border-radius: 4px;
+}
+.day-box.active {
+    background-color: var(--color-secondary);
+}
+
+.engagement-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.engagement-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.bridge-now-btn {
+    margin-left: auto;
+    padding: 8px 16px;
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.bridge-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.bridge-stat {
+    background-color: var(--color-background);
+    border-radius: 8px;
+    padding: 16px;
+    border-left: 4px solid;
+}
+.bridge-stat.green-border { border-color: #16a34a; }
+.bridge-stat.blue-border { border-color: #2563eb; }
+.bridge-stat.purple-border { border-color: #7e22ce; }
+.bridge-stat svg { margin-bottom: 8px; }
+.bridge-stat span { display: block; font-size: 1.25rem; font-weight: 700; }
+.bridge-stat small { color: var(--color-text-secondary); }
+
+.bridge-asset-card h4 {
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.recent-transactions-list {
+    font-size: 0.875rem;
+}
+.transaction {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    align-items: center;
+    padding: 8px 0;
+}
+.transaction .status { font-weight: 500; text-align: right; }
+.transaction .status.completed { color: #16a34a; }
+.transaction .status.pending { color: #f59e0b; }
+.transaction .status.failed { color: #ef4444; }
+
+.feed-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--color-border);
+}
+.feed-filters button {
+    padding: 8px 12px;
+    border-bottom: 2px solid transparent;
+    color: var(--color-text-secondary);
+}
+.feed-filters button.active {
+    color: var(--color-text-primary);
+    border-bottom-color: var(--color-primary);
+}
+.feed-filters button sup {
+    background-color: var(--color-background);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    margin-left: 4px;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.activity-item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.activity-icon.qns { background-color: rgba(126, 34, 206, 0.2); color: #a855f7; }
+.activity-icon.social { background-color: rgba(239, 68, 68, 0.2); color: #ef4444; }
+.activity-icon.bridge { background-color: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+.activity-details { flex-grow: 1; }
+.activity-details p { font-size: 0.9rem; }
+.activity-details span { font-size: 0.8rem; color: var(--color-text-secondary); font-family: monospace;}
+.activity-meta { display: flex; flex-direction: column; align-items: flex-end; font-size: 0.8rem; color: var(--color-text-secondary); }
+.activity-meta .tag {
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    color: white;
+    margin-bottom: 4px;
+}
+.tag.qns { background-color: #a855f7; }
+.tag.social { background-color: #ef4444; }
+.tag.bridge { background-color: #3b82f6; }
+
+@media (max-width: 1200px) {
+    .analytics-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "metric1 metric2"
+            "metric3 metric4"
+            "streak streak"
+            "engagement engagement"
+            "bridge bridge"
+            "activity activity";
+    }
+}
+@media (max-width: 768px) {
+    .analytics-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "metric1"
+            "metric2"
+            "metric3"
+            "metric4"
+            "streak"
+            "engagement"
+            "bridge"
+            "activity";
+    }
+     .analytics-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}

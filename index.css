@@ -1,0 +1,102 @@
+/* index.css or a global styles file */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap');
+
+:root {
+  /* Colors */
+  --color-background: #0D0D0D; /* Dark background */
+  --color-surface: #1C1C1C;    /* Card backgrounds, darker than background */
+  --color-border: #333333;     /* Subtle borders */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #AAAAAA; /* For subtitles and labels */
+  --color-highlight: #4CAF50;   /* Green for checkmarks, etc. */
+  --color-orange: #FF7043;      /* Orange from gradient */
+  --color-purple: #9C27B0;      /* Purple from gradient */
+  --color-yellow: #FFC107;      /* Yellow for stars */
+  --color-pink: #8b1e3f;
+
+  /* Fonts */
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Inter', sans-serif; /* The hero title looks like Inter bold */
+  --font-space-grotesk: 'Space Grotesk', sans-serif; /* For numbers/stats */
+
+  /* Spacing */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+  --spacing-xxl: 60px;
+  --spacing-xxxl: 100px;
+
+  /* Border Radius */
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px; /* Default horizontal padding */
+}
+
+/* Global Button Styles - Refine Existing */
+.btn {
+  padding: 14px 28px; /* Slightly more padding for taller buttons */
+  border-radius: var(--border-radius-sm);
+  font-weight: 600; /* Slightly bolder */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none; /* If used with <a> tags */
+  display: inline-flex; /* For consistent alignment with text/icons */
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--color-pink);
+  color: var(--color-text-primary);
+  border: none;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px); /* Subtle lift */
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.08); /* Slightly darker transparent */
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12); /* Slightly lighter on hover */
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  width: 100%;
+  padding: 14px; /* Consistent with other buttons */
+  border: 1px solid var(--color-border); /* Use border variable */
+  color: var(--color-text-primary);
+  background-color: transparent;
+  border-radius: var(--border-radius-sm);
+  font-weight: 500;
+}
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* Subtle hover for outline */
+  border-color: var(--color-text-secondary); /* or a subtle glow color */
+}
+
+/* Base styles for sections */
+section {
+  padding: var(--spacing-xxxl) 0; /* Consistent vertical padding */
+}

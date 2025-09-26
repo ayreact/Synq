@@ -1,0 +1,131 @@
+.qns-ownership-page {
+    max-width: 800px;
+}
+
+.roles-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+.roles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.roles-header h2 {
+    font-size: 2rem;
+    font-family: var(--font-space-grotesk);
+}
+
+.address-count {
+    background-color: #1a5e42;
+    color: #1AB675;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.roles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.role-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background-color: var(--color-background);
+    border-radius: 8px;
+}
+
+.role-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.role-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-text-secondary);
+}
+
+.role-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.role-tag {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.role-tag.owner {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.role-item .more-btn {
+    color: var(--color-text-secondary);
+}
+
+.dates-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+.date-item span {
+    color: var(--color-text-secondary);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.date-item p {
+    font-weight: 500;
+    font-family: monospace;
+}
+
+.ownership-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.ownership-actions button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.btn-reminder {
+    background-color: var(--color-primary);
+}
+
+.btn-extend {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+.btn-extend:hover {
+     background-color: var(--color-primary);
+     color: var(--color-text-primary);
+}
